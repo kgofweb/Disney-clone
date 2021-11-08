@@ -1,8 +1,15 @@
+import { 
+  Container,
+} from "./Home.styled"
+import ImgSlider from "../ImgSlide/ImgSlider"
+import Viewers from "../views/Viewers"
+
 const Home = () => {
   return (
-    <div>
-      Home Page
-    </div>
+    <Container>
+      <ImgSlider />
+      <Viewers />
+    </Container>
   )
 }
 

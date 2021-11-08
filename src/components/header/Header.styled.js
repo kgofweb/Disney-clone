@@ -53,8 +53,6 @@ export const NavMenu = styled.div`
   justify-content: flex-end;
   flex-flow: row nowrap;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
   position: relative;
   margin-right: auto;
   margin-left: 25px;
@@ -121,14 +119,14 @@ export const DropDown = styled.div`
   position: absolute;
   top: 40px;
   right: 0px;
-  background: rgb(19, 19, 19);
-  border: 1px solid rgba(151, 151, 151, 0.34);
+  width: 100px;
+  font-size: 14px;
   border-radius: 4px;
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  background: rgb(19, 19, 19);
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
   padding: 10px;
-  font-size: 14px;
   letter-spacing: 3px;
-  width: 100px;
   opacity: 0;
 `;
 
@@ -140,6 +138,7 @@ export const SignOut = styled.div`
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  
   ${UserImg} {
     border-radius: 50%;
     width: 100%;

@@ -42,12 +42,12 @@ const Header = () => {
       auth
       .signInWithPopup(provider)
         .then(result => {
-          console.log(result)
+          // console.log(result)
           setUser(result.user)
         })
         .catch(error => { alert(error.message) })
-      // Si l'utilisateur est connecté
-    } else if (userName) {
+      // Si l'utilisateur est connecté if (userName)
+    } else {
       auth
       .signOut()
         .then(() => {
