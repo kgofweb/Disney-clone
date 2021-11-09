@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  padding: 0 0 26px;
+`
+
+export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 25px;
   gap: 25px;
-  margin-top: 30px;
-  padding: 30px 0 26px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-top: 26px;
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 `
 
@@ -17,33 +20,24 @@ export const Wrap = styled.div`
   position: relative;
   padding-top: 56.25%;
   border-radius: 10px;
-  border: 3px solid rgba(249, 249, 249, 0.1);
-  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, 
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   cursor: pointer;
   overflow: hidden;
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  border: 3px solid rgba(249, 249, 249, 0.1);
 
   img {
     display: block;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
     inset: 0px;
     object-fit: cover;
+    height: 100%;
     transition: opacity 500ms ease-in-out 0s;
     opacity: 1;
     z-index: 1;
-  }
-
-  video {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 0;
   }
 
   &:hover {
@@ -51,9 +45,5 @@ export const Wrap = styled.div`
       rgb(0 0 0 / 72%) 0px 30px 22px -10px;
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
-    
-    video {
-      opacity: 1;
-    }
   }
 `
