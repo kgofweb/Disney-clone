@@ -1,4 +1,5 @@
-import styled from "styled-components";
+// Its a same css for Recommend, NewDisney, Original, Trending
+import styled from "styled-components"
 
 export const Container = styled.div`
   padding: 0 0 26px;

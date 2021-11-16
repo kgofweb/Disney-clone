@@ -14,7 +14,7 @@ const userSlice = createSlice({
     // Get users details when user is connected
     setUserLoginDetails: (state, action) => {
       state.name = action.payload.name
-      state.email = action.payload.name
+      state.email = action.payload.email
       state.photo = action.payload.photo
     },
 

@@ -17,4 +17,4 @@ export const Container = styled.main`
     opacity: 1;
     z-index: -1;
   }
-`;
+`

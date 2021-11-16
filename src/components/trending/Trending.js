@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { selectRecommend } from '../../features/movies/movieSlice'
+import { selectTrending } from '../../features/movies/movieSlice'
 import { Container, Content, Wrap } from '../global/Global.styled'
 
-const Recommends = () => {
-  const movies = useSelector(selectRecommend)
-  console.log(movies, ":🛢️");
+const Original = () => {
+  const movies = useSelector(selectTrending)
   
   return (
     <Container>
-      <h4>Recommended for You</h4>
+      <h4>Trending</h4>
       <Content>
         {movies && movies.map((movie, key) => (
           <Wrap key={key}>
@@ -24,4 +23,4 @@ const Recommends = () => {
   )
 }
 
-export default Recommends
+export default Original
